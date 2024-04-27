@@ -22,7 +22,7 @@ export function Chat() {
     , [messages]);
   return (
     <div className="flex flex-col flex-grow justify-center items-center w-full h-screen" >
-      {/* <Image src="/prosights-logo.jpg" alt="Prosights" width={300} height={300} className='mt-6'/> */}
+      <Image src="/prosights-logo.jpg" alt="Prosights" width={messages.length === 0 ? 300 : 200} height={messages.length === 0 ? 300 : 200} className='mt-6' />
       <div className="w-full sm:w-full md:w-3/4 lg:w-3/4 xl:w-3/4 overflow-hidden">
         <CardContent
           className="relative flex flex-col h-full"
