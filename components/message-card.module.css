@@ -1,0 +1,12 @@
+.markdown ol {
+    @apply list-decimal;
+  }
+  
+  .markdown li {
+    @apply mb-2;
+  }
+  
+  .markdown strong {
+    @apply font-bold;
+  }
+  
