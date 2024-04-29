@@ -10,17 +10,11 @@ interface MessageCardProps {
     isUser: boolean;
 }
 
-interface Message {
-    text: string;
-    language?: string;
-}
-
-
 const MessageCard: React.FC<MessageCardProps> = ({ avatarSrc, avatarAlt, message, isUser }) => {
+    // NOTE: hardcoding the text for now since have not implemented login
     const avatarFallbackText = isUser ? 'AB' : 'Prosights';
     const displayName = avatarFallbackText === 'AB' ? 'You' : 'Prosights';
     const displayNameColor = isUser ? '' : 'text-prosightsBlue';
-    const test = `1. Market Skepticism:\n a 2. Hello`
     return (
         <div className={`rounded-lg p-4`}>
             <div className="flex flex-col">
@@ -33,7 +27,6 @@ const MessageCard: React.FC<MessageCardProps> = ({ avatarSrc, avatarAlt, message
                         <p className={`text-md font-lg ${displayNameColor}`}>{displayName}</p>
                         <ReactMarkdown className={styles.markdown}>{message}</ReactMarkdown>
                     </div>
-
                 </div>
             </div>
         </div>
